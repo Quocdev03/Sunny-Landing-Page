@@ -1,0 +1,126 @@
+.footer {
+    background-color: $gray-lighter;
+    padding-top: 80px;
+    font-family: $third-font;
+
+    &-top {
+        display: grid;
+        // grid-template-columns: 2fr 1fr 1fr 1fr;
+        grid-template-columns: 3fr repeat(3, 1fr);
+        grid-gap: 30px 70px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #c4c4c4;
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        gap: 0 35px;
+    }
+
+    &-social {
+        color: black;
+        font-size: 30px;
+
+        &:nth-child(1) {
+            transition: all .1s linear;
+
+            &:hover {
+                color: #1DA1F2;
+            }
+        }
+
+        &:nth-child(2) {
+            transition: all .1s linear;
+
+            &:hover {
+                color: #4267B2;
+            }
+        }
+
+        &:nth-child(3) {
+            transition: all .1s linear;
+            display: block;
+
+            &:hover {
+                background: -webkit-linear-gradient(#fed373 4%,
+                        #f15245 30%,
+                        #d92e7f 62%,
+                        #9b36b7 85%,
+                        #515ecf);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all .3s linear;
+            }
+        }
+
+        &:nth-child(4) {
+            transition: all .1s linear;
+
+            &:hover {
+                color: #0077b5;
+            }
+        }
+
+        &:last-child {
+            transition: all .1s linear;
+
+            &:hover {
+                color: #FF0000;
+            }
+        }
+    }
+
+    &-logo {
+        margin-bottom: 26px;
+    }
+
+    &-desc {
+        margin-bottom: 55px;
+        width: 100%;
+        max-width: 335px;
+    }
+
+    &-copyright {
+        font-size: 17px;
+    }
+
+    &-title {
+        color: black;
+        font-size: 19px;
+        margin-bottom: 45px;
+        font-family: $third-font;
+        font-weight: 700;
+    }
+
+    &-link {
+        font-weight: 300;
+        font-size: 18px;
+        color: #848484;
+        transition: all 0.2s linear;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &-item {
+        margin-bottom: 22px;
+    }
+
+    @media screen and (max-width: 1023.98px) {
+        &-top {
+            transition: all 0.4s linear;
+            grid-template-columns: 3fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        &-top {
+            transition: all 0.4s linear;
+            grid-template-columns: 3fr;
+        }
+    }
+}

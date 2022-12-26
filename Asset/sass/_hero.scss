@@ -1,0 +1,93 @@
+.hero {
+    margin-bottom: 270px;
+    transition: all 0.4s linear;
+
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.4s linear;
+    }
+
+    &-heading {
+        font-size: 64px;
+        line-height: 125%;
+        margin-bottom: 74px;
+        transition: all 0.4s linear;
+    }
+
+    &-caption {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 48px;
+        padding-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        color: $gray-darkest;
+        transition: all 0.4s linear;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background: $gray-darkest;
+        }
+    }
+
+    &-content {
+        width: 100%;
+        transition: all 0.4s linear;
+    }
+
+    &-form {
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 34px;
+        transition: all 0.4s linear;
+    }
+
+    @media screen and (min-width: 1280px) {
+
+        &-image {
+            transform: translateX(85px);
+            transition: all 0.4s linear;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        &-content {
+            width: 100%;
+            max-width: 470px;
+            transition: all 0.4s linear;
+        }
+    }
+
+    @media screen and (max-width: 1023.98px) {
+        margin-bottom: 75px;
+        transition: all 0.4s linear;
+
+        &-main {
+            flex-direction: column;
+            gap: 50px 0;
+            transition: all 0.4s linear;
+        }
+    }
+
+    @media screen and (max-width: 767.98px) {
+        &-heading {
+            font-size: 50px;
+            margin-bottom: 40px;
+            transition: all 0.4s linear;
+        }
+
+        &-form {
+            grid-template-columns: 1fr;
+            transition: all 0.4s linear;
+        }
+    }
+
+}

@@ -1,0 +1,91 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 0 35px;
+    transition: all 0.4s linear;
+
+    &-toggle {
+        display: none;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+    }
+
+    &-link {
+        color: inherit;
+        transition: all 0.4s linear;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-color: black;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -5px;
+            transition: all 0.3s linear;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    @media screen and (max-width: 1023.98px) {
+        transition: all 0.4s linear;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 300px;
+        flex-direction: column;
+        align-items: stretch;
+        z-index: 9;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform: translateX(200%);
+
+        &.is {
+            &-show {
+                transform: translateX(0);
+            }
+        }
+
+        &-link {
+            display: block;
+            padding: 20px 25px;
+            width: 100%;
+        }
+
+        &-item:first-child {
+            margin-top: 40px;
+        }
+
+        &-item:last-child,
+        &-item:nth-last-child(2) {
+            padding: 20px 25px;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        &-toggle {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 767.99px) {
+        &:hover::after {
+            width: 50%;
+        }
+    }
+
+
+}
